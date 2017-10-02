@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photosCell" id="gTV-IL-0wX" customClass="RARRestaurantDetailsPhotosCVCell" customModule="Restaurants" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="BxL-5u-D5d">
+                        <rect key="frame" x="169" y="106" width="37" height="37"/>
+                        <color key="color" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </activityIndicatorView>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noPhotoAvailable" translatesAutoresizingMaskIntoConstraints="NO" id="vUU-su-j3z">
+                        <rect key="frame" x="159" y="100" width="57" height="49"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="49" id="4oE-0J-1Yi"/>
+                            <constraint firstAttribute="width" constant="57" id="lSn-Et-h6f"/>
+                        </constraints>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No photo available" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-vh-THk">
+                        <rect key="frame" x="139" y="157" width="97.5" height="13.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                        <color key="textColor" red="0.67843137249999996" green="0.67843137249999996" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0a-jc-y0Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                    </scrollView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="x0v-3G-xru">
+                        <rect key="frame" x="168" y="205" width="39" height="37"/>
+                    </pageControl>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BxL-5u-D5d" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="2aT-HY-sgG"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x0v-3G-xru" secondAttribute="trailing" constant="8" id="3tO-ca-6Hj"/>
+                <constraint firstItem="Ehn-vh-THk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="7uf-BX-aYi"/>
+                <constraint firstItem="Ehn-vh-THk" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="7yz-5r-Y4u"/>
+                <constraint firstItem="x0v-3G-xru" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="81q-sj-gG0"/>
+                <constraint firstItem="BxL-5u-D5d" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AEC-gY-5Hx"/>
+                <constraint firstItem="vUU-su-j3z" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="AKR-ab-xxg"/>
+                <constraint firstItem="vUU-su-j3z" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="JaO-qO-PjH"/>
+                <constraint firstItem="g0a-jc-y0Q" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Lbw-ro-aE3"/>
+                <constraint firstItem="g0a-jc-y0Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="a9d-SB-KDH"/>
+                <constraint firstItem="Ehn-vh-THk" firstAttribute="top" secondItem="vUU-su-j3z" secondAttribute="bottom" constant="8" id="cmM-gm-s0N"/>
+                <constraint firstAttribute="trailing" secondItem="g0a-jc-y0Q" secondAttribute="trailing" id="gG6-1r-pzN"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ehn-vh-THk" secondAttribute="trailing" constant="8" id="hTI-xv-WZQ"/>
+                <constraint firstAttribute="bottom" secondItem="x0v-3G-xru" secondAttribute="bottom" constant="8" id="lO1-TO-lhi"/>
+                <constraint firstAttribute="bottom" secondItem="g0a-jc-y0Q" secondAttribute="bottom" id="uej-Fh-gvH"/>
+                <constraint firstItem="x0v-3G-xru" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="xlw-MA-Tyj"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="activityIndicator" destination="BxL-5u-D5d" id="Mxj-l1-fVm"/>
+                <outlet property="noPhotoImageView" destination="vUU-su-j3z" id="spj-9j-q6B"/>
+                <outlet property="noPhotoLbl" destination="Ehn-vh-THk" id="oWI-2X-NAF"/>
+                <outlet property="pageControler" destination="x0v-3G-xru" id="Esp-H7-Mcz"/>
+                <outlet property="scrollView" destination="g0a-jc-y0Q" id="u5e-xI-B0M"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="54"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="noPhotoAvailable" width="57" height="49"/>
+    </resources>
+</document>

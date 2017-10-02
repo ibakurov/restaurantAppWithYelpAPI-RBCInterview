@@ -1,0 +1,22 @@
+PODS:
+  - Alamofire (4.5.1)
+  - AlamofireImage (3.3.0):
+    - Alamofire (~> 4.5)
+  - KeychainSwift (9.0.2)
+  - ReachabilitySwift (3)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireImage
+  - KeychainSwift
+  - ReachabilitySwift
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  KeychainSwift: 3ab1d428d0dbff59cd056f1d0bfc640b36c2b081
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+
+PODFILE CHECKSUM: 88dc6c376347dfe76f16c981320edc5c9ad4f5c8
+
+COCOAPODS: 1.2.1
