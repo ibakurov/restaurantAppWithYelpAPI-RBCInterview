@@ -11,4 +11,9 @@ pod "ReachabilitySwift" #Check for Network status
 
 pod "KeychainSwift" #This is a collection of helper functions for saving text and data in the Keychain
 
+    target 'RestaurantsTests' do
+        inherit! :search_paths
+        pod "Alamofire" #API requests
+    end
+
 end

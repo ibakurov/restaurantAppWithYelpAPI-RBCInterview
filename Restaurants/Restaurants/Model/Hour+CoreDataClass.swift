@@ -20,21 +20,17 @@ public class Hour: NSManagedObject {
     convenience init(_ json: [String: Any]) {
         self.init(entity: NSEntityDescription.entity(forEntityName: "Hour", in: AppDelegate.shared.persistentContainer.viewContext)!, insertInto: nil)
         
-        if let hours = json["open"] as? [[String: Any]] {
-            for hour in hours {
-                if let isOvernight = hour["is_overnight"] as? Bool {
-                    self.isOvernight = isOvernight
-                }
-                if let end = hour["end"] as? String {
-                    self.end = end
-                }
-                if let start = hour["start"] as? String {
-                    self.start = start
-                }
-                if let day = hour["day"] as? Int {
-                    self.day = Int16(day)
-                }
-            }
+        if let isOvernight = json["is_overnight"] as? Bool {
+            self.isOvernight = isOvernight
+        }
+        if let end = json["end"] as? String {
+            self.end = end
+        }
+        if let start = json["start"] as? String {
+            self.start = start
+        }
+        if let day = json["day"] as? Int {
+            self.day = Int16(day)
         }
     }
     

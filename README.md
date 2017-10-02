@@ -1,6 +1,6 @@
 # Restaurant App
 
-This app uses Yelp API to fetch information about near by restaurants, and Core Data to store favorite places persistently.
+This app uses Yelp API to fetch information about nearby restaurants, and Core Data to store favorite places persistently.
 
 It supports both iPhones and iPads running iOS 10 and higher. Written with Swift 4 and xCode 9.
 
@@ -10,6 +10,9 @@ There is a possibility to save restaurants into Favourites tab, by clicking hear
 
 CocoaPods are used to use third-party libraries: Alamofire, AlamofireImage, KeychainSwift, and ReachabilitySwift.
 
-Alamofire is used for REST API calls. AlamofireImage is used for async download of images and caching them. KeychainSwift is used to store token which is fetched from Yelp API. Finally, ReachabilitySwift was not yet used, but the idea ws to check if network access is present, and if not then warn the user about that.
+Alamofire is used for REST API calls. AlamofireImage is used for async download of images and caching them. KeychainSwift is used to store token which is fetched from Yelp API. Finally, ReachabilitySwift was not yet used, but the idea was to check if network access is present, and if not then warn the user about that.
 
+UnitTests are written to check API requests, core data object manipulation, and  testing some utility functions, such as date conversion from string.
+
+Application also uses Dynamic Type for all labels to support Accessibility.
 

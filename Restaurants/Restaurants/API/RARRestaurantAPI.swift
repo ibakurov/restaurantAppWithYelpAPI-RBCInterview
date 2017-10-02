@@ -28,6 +28,7 @@ class RARRestaurantAPI {
     // MARK: - Methods
     //-----------------
     
+    @discardableResult
     func fetchRestauraunts(keyword: String, latitude: Double = 43.646210, longitude: Double = -79.379539, offset: Int, limit: Int, success: @escaping ([Restaurant], Int) -> (), failure: @escaping () -> () = {}) -> DataRequest? {
         //If we got token to make requests, we are good to fetch initial data, otherwise we should wait until token is fetched
         if let token = KeychainSwift.init().get(Constants.keyToken) {
@@ -59,6 +60,7 @@ class RARRestaurantAPI {
         return nil
     }
     
+    @discardableResult
     func fetchDetails(forRestaurant restaurantId: String, success: @escaping (Restaurant) -> (), failure: @escaping () -> () = {}) -> DataRequest? {
         //If we got token to make requests, we are good to fetch initial data, otherwise we should wait until token is fetched
         if let token = KeychainSwift.init().get(Constants.keyToken) {
@@ -85,6 +87,7 @@ class RARRestaurantAPI {
         return nil
     }
     
+    @discardableResult
     func fetchReviews(forRestaurant restaurantId: String, success: @escaping ([Review]) -> (), failure: @escaping () -> () = {}) -> DataRequest? {
         //If we got token to make requests, we are good to fetch initial data, otherwise we should wait until token is fetched
         if let token = KeychainSwift.init().get(Constants.keyToken) {

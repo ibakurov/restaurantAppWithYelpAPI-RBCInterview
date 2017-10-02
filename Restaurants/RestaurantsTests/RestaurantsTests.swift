@@ -21,16 +21,14 @@ class RestaurantsTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    //Tests that conversion between string and date are working
+    func testDateConversion() {
+        let now = Calendar(identifier: .gregorian).startOfDay(for: Date())
+        let nowInString = Date.convertDateToStringDate(date: now, dateFormatToString: Review.Constants.dateFormat)
+        XCTAssertNotNil(nowInString)
+        
+        let backToNow = Date.convertStringDateToDate(dateInString: nowInString!, dateFormatInString: Review.Constants.dateFormat)
+        XCTAssertNotNil(backToNow)
     }
     
 }

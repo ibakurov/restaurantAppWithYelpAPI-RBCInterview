@@ -58,9 +58,11 @@ public class Restaurant: NSManagedObject {
                 self.addToPhotos(photo)
             }
         }
-        if let multipleHours = json["hours"] as? [[String : Any]], let hours = multipleHours.first {
-            let hour = Hour(hours)
-            self.addToHours(hour)
+        if let multipleHours = json["hours"] as? [[String : Any]], let hours = multipleHours.first, let openHours = hours["open"] as? [[String: Any]] {
+            for openHour in openHours {
+                let hour = Hour(openHour)
+                self.addToHours(hour)
+            }
         }
         if let categories = json["categories"] as? [[String: Any]] {
             for category in categories {
